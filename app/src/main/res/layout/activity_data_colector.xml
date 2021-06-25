@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".dataColector">
+
+<TableLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center">
+    <TextView android:id="@+id/TEXTNAME" android:text="NOMBRE"></TextView>
+    <TextView android:id="@+id/GENDERNAME" android:text="GENDER"></TextView>
+    <TableRow android:gravity="center">
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="0dp"
+            android:layout_marginEnd="196dp"
+            android:text="Inserte su nombre aqui"
+            tools:layout_editor_absoluteX="129dp"
+            tools:layout_editor_absoluteY="73dp" />
+    </TableRow>
+    <TableRow
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+        <EditText
+            android:layout_width="348dp"
+            android:id="@+id/user_name"
+            android:layout_height="48dp"
+            android:hint="Nombre"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="116dp"></EditText>
+    </TableRow>
+    <TableRow>
+        <RadioGroup
+            android:id="@+id/radioSex"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/radioMale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="changeGenderToMale"
+                android:text="Hombre" />
+
+            <Button
+                android:id="@+id/radioFemale"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="changeGenderToFemale"
+                android:text="Mujer" />
+        </RadioGroup>
+    </TableRow>
+    <TableRow android:gravity="center_horizontal">
+        <Button
+            android:id="@+id/next_image_button"
+            android:layout_width="345dp"
+            android:layout_height="47dp"
+            android:onClick="sendInformation"
+            android:text="Enviar"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.932"></Button>
+    </TableRow>
+        <Button
+            android:id="@+id/exit_button"
+            android:layout_width="169dp"
+            android:layout_height="47dp"
+            android:onClick="getBack"
+            android:text="salir" />
+        <Button
+            android:id="@+id/back_button"
+            android:layout_width="66dp"
+            android:layout_height="47dp"
+            android:onClick="getBack"
+            android:text="Atras"></Button>
+</TableLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

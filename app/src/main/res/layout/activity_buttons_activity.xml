@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".buttonsActivity">
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/NOMBRE"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Obtained NAME: "></TextView>
+        </TableRow>
+
+        <TableRow>
+
+            <TextView
+                android:id="@+id/GENDER"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Obtained GENDER: "></TextView>
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="seeImage"
+                android:text="Ver imagen motivadora"></Button>
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/exit_button"
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:onClick="salir"
+                android:text="salir" />
+        </TableRow>
+
+        <TableRow>
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="66dp"
+                android:layout_height="47dp"
+                android:onClick="backToDataColectorButton"
+                android:text="Atras"></Button>
+        </TableRow>
+    </TableLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
