@@ -23,6 +23,7 @@ public class buttonsActivity extends AppCompatActivity {
         TextView nombreView = findViewById(R.id.NOMBRE);
         TextView genderView = findViewById(R.id.GENDER);
 
+
         if(gender == 1){
             genderView.setText("Genero: Masculino");
         }else{
@@ -36,12 +37,21 @@ public class buttonsActivity extends AppCompatActivity {
         Integer random = rn.nextInt(5)+1;
         Log.d("Numero", random.toString());
 
+        String userName = getIntent().getStringExtra("UserName");
+        Integer gender = getIntent().getIntExtra("Genero", 1);
+        Intent imageView = new Intent(this, ImageActivity.class);
+
+        imageView.putExtra("UserName", userName);
+        imageView.putExtra("ImageNumber", random);
+        imageView.putExtra("Genero", gender);
+
+        startActivity(imageView);
     }
     public void salir(View view){
         finish();
     }
     public void backToDataColectorButton(View view){
-        Intent dataColectorView =  new Intent(this, dataColector.class);
+        Intent dataColectorView = new Intent(this, dataColector.class);
         startActivity(dataColectorView);
     }
 }

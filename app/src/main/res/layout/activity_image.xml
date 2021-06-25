@@ -6,13 +6,53 @@
     android:layout_height="match_parent"
     tools:context=".ImageActivity">
 
+    <TextView
+        android:id="@+id/userNameView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Su nombre es: "
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent">
+    </TextView>
+
+    <TextView
+        android:id="@+id/userGenderView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Y su genero es: "
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.756"
+        tools:layout_editor_absoluteX="0dp"></TextView>
+
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="247dp"
-        android:layout_height="237dp"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:layout_constraintVertical_bias="0.194"
+        android:src="@drawable/men_1"/>
+
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+            <Button android:text="Salir"></Button>
+        </TableRow>
+
+        <TableRow android:gravity="center">
+            <Button android:text="Atras" android:onClick="getBack"></Button>
+        </TableRow>
+    </TableLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

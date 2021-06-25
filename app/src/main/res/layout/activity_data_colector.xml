@@ -10,8 +10,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:gravity="center">
-    <TextView android:id="@+id/TEXTNAME" android:text="NOMBRE"></TextView>
-    <TextView android:id="@+id/GENDERNAME" android:text="GENDER"></TextView>
     <TableRow android:gravity="center">
         <TextView
             android:id="@+id/textView"

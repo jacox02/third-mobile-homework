@@ -8,9 +8,11 @@
 
     <TableLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-        <TableRow>
+        <TableRow android:gravity="center">
 
             <TextView
                 android:id="@+id/NOMBRE"
@@ -19,7 +21,7 @@
                 android:text="Obtained NAME: "></TextView>
         </TableRow>
 
-        <TableRow>
+        <TableRow android:gravity="center">
 
             <TextView
                 android:id="@+id/GENDER"
@@ -28,7 +30,7 @@
                 android:text="Obtained GENDER: "></TextView>
         </TableRow>
 
-        <TableRow>
+        <TableRow android:gravity="center">
 
             <Button
                 android:layout_width="wrap_content"
@@ -37,7 +39,7 @@
                 android:text="Ver imagen motivadora"></Button>
         </TableRow>
 
-        <TableRow>
+        <TableRow android:gravity="center">
 
             <Button
                 android:id="@+id/exit_button"
@@ -47,7 +49,10 @@
                 android:text="salir" />
         </TableRow>
 
-        <TableRow>
+        <TableRow
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
             <Button
                 android:id="@+id/backButton"
